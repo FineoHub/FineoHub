@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#202220" name="theme-color"/>
+<meta content="FineoHub — каталог кредитних пропозицій. Порівнюйте умови та переходьте до офіційних сторінок кредиторів." name="description"/>
+<title>FineoHub — кредитні пропозиції</title>
+<style>
+:root{--teal:#11b9ad;--teal-dark:#087f7a;--teal-pale:#e7fbf8;--ink:#143b43;--muted:#617b80;--line:#dcefeb;--white:#fff;--bg:#383838}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:#292929;background-image:radial-gradient(circle at 1px 1px,#ffffff18 1px,transparent 1.6px),radial-gradient(ellipse at 18% 18%,#62626288 0,transparent 42%),radial-gradient(ellipse at 82% 72%,#11111188 0,transparent 48%),repeating-linear-gradient(145deg,#ffffff08 0 1px,transparent 1px 22px),linear-gradient(135deg,#252525,#484848 48%,#242424);background-size:5px 5px,auto,auto,auto,auto;background-attachment:fixed;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.17;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='520' viewBox='0 0 760 520'%3E%3Cg fill='none' stroke='%23d8d8d8' stroke-width='2'%3E%3Crect x='55' y='105' width='560' height='300' rx='22' transform='rotate(-12 335 255)'/%3E%3Crect x='78' y='128' width='514' height='254' rx='16' transform='rotate(-12 335 255)'/%3E%3Ccircle cx='335' cy='255' r='94'/%3E%3Ccircle cx='335' cy='255' r='78'/%3E%3Cpath d='M280 255h110M335 200v110M160 190l50-10M465 320l55-12M175 335l42-9M480 175l40-10'/%3E%3C/g%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center 58%;background-size:min(1000px,115vw) auto}
+.topbar{background-color:#292929;background-image:radial-gradient(circle at 1px 1px,#ffffff20 1px,transparent 1.7px),linear-gradient(#161616a8,#202020b8),repeating-linear-gradient(135deg,#ffffff09 0 2px,transparent 2px 24px),linear-gradient(120deg,#343434,#202020 60%,#414141);background-size:5px 5px,auto,auto,auto;color:#fff;overflow:hidden;position:relative}
+.topbar:after{content:"";position:absolute;width:340px;height:340px;border:1px solid #ffffff30;border-radius:50%;right:-90px;top:-190px;box-shadow:0 0 0 35px #ffffff0c,0 0 0 75px #ffffff0a}
+.nav{max-width:1160px;margin:auto;padding:22px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:23px;letter-spacing:-.7px}
+.logo{width:39px;height:39px;border-radius:13px;background:#fff;color:#07968d;display:grid;place-items:center;font-weight:900;font-size:22px;box-shadow:0 6px 20px #075e5a30}
+.navtag{font-size:13px;font-weight:650;background:#ffffff20;border:1px solid #ffffff40;padding:9px 13px;border-radius:999px}
+.hero{max-width:1160px;margin:auto;padding:48px 22px 66px;position:relative;z-index:1}
+.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.8px;font-weight:800;color:#d8fffa}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-1.8px;max-width:720px;margin:15px 0 16px}
+.hero p{font-size:17px;line-height:1.7;color:#e7fffc;max-width:650px;margin:0}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.pill{font-size:13px;font-weight:650;background:#ffffff19;border:1px solid #ffffff38;padding:10px 14px;border-radius:999px}
+main{max-width:1160px;margin:-24px auto 0;padding:0 22px 42px;position:relative;z-index:2}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:0 0 20px}
+.section-head h2{font-size:25px;letter-spacing:-.7px;margin:0 0 6px;color:#fff;text-shadow:0 2px 4px #0008}
+.section-head p{color:#d0d0d0;font-size:14px;margin:0}
+.count{background:#d9f7f2;color:#087f7a;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:0 7px 22px #164e4910;display:flex;flex-direction:column;min-height:224px;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #164e4917}
+.card-top{display:flex;align-items:center;gap:12px;margin-bottom:17px}
+.offer-icon{width:47px;height:47px;flex:0 0 47px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,#e0faf5,#b9f0e7);color:#07877f;font-size:18px;font-weight:900}
+.card h3{font-size:17px;margin:0;line-height:1.3;overflow-wrap:anywhere}
+.label{font-size:11px;color:#6b888b;margin-top:5px;font-weight:700;letter-spacing:.3px}
+.card-copy{font-size:13px;line-height:1.55;color:var(--muted);margin:0 0 18px}
+.cta{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--teal);color:#063f3c;text-decoration:none;font-weight:850;font-size:14px;padding:13px 14px;border-radius:12px;transition:background .15s ease}
+.cta:hover{background:#51d7c8}
+.cta span{font-size:18px;line-height:12px}
+.note{margin-top:24px;border:1px solid #d5eeea;background:#edfaf8;border-radius:17px;padding:17px 19px;color:#456a6c;font-size:12px;line-height:1.65}
+.note strong{color:#174d4c}
+footer{border-top:1px solid var(--line);background:#fff;padding:25px 22px 30px;color:#698387;font-size:12px;line-height:1.7}
+.footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-brand{font-weight:850;color:#168d86;font-size:15px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:38px}}
+@media(max-width:580px){.nav{padding:16px}.brand{font-size:21px}.navtag{font-size:11px;padding:8px 10px}.hero{padding:34px 18px 54px}.hero h1{font-size:38px}.hero p{font-size:15px}main{padding:0 14px 30px}.section-head{align-items:start}.section-head h2{font-size:22px}.grid{grid-template-columns:1fr;gap:12px}.card{min-height:0;padding:17px}.card-copy{margin-bottom:15px}}
+
+.offer-facts{display:grid;gap:8px;margin:14px 0 16px;padding:12px;border:1px solid #d7f1ed;border-radius:14px;background:#f5fcfb}.offer-fact{display:grid;grid-template-columns:95px 1fr;gap:8px;font-size:13px;line-height:1.4}.offer-fact strong{color:#47706d;font-weight:700}.offer-fact span{color:#163c3b;font-weight:650}.data-note{margin:18px 0;padding:14px 16px;border-radius:14px;background:#4b4b4b;border:1px solid #666;color:#f1f1f1;font-size:13px;line-height:1.55}
+
+.faq{margin:28px 0 24px;color:#fff}
+.faq h2{font-size:clamp(23px,3vw,30px);margin:0 0 16px;color:#fff;text-shadow:0 2px 4px #0008}
+.faq-item{margin:10px 0;border:1px solid #ffffff28;border-radius:14px;background:#ffffff12;overflow:hidden;box-shadow:0 5px 18px #0002}
+.faq-item summary{list-style:none;cursor:pointer;position:relative;padding:17px 48px 17px 18px;font-weight:800;font-size:16px;line-height:1.45;color:#fff}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:after{content:'＋';position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;color:#8bc529;font-weight:800}
+.faq-item[open] summary:after{content:'−'}
+.faq-answer{padding:0 18px 18px;color:#e6e6e6;font-size:14px;line-height:1.75}
+.faq-answer p{margin:0}
+.faq-answer ol{margin:0;padding-left:22px}
+@media(max-width:580px){.faq-item summary{font-size:15px;padding:15px 42px 15px 15px}.faq-answer{padding:0 15px 16px}}
+
+
+.lender-info{margin:28px 0 24px;color:#fff}.lender-info h2{font-size:clamp(23px,3vw,30px);margin:0 0 8px;color:#fff;text-shadow:0 2px 4px #0008}.lender-intro{color:#e2e2e2;font-size:13px;line-height:1.65;margin:0 0 16px}.lender-item{margin:10px 0;border:1px solid #ffffff2b;border-radius:14px;background:#ffffff12;overflow:hidden;box-shadow:0 5px 18px #0002}.lender-item summary{list-style:none;cursor:pointer;position:relative;padding:16px 48px 16px 18px;font-weight:800;font-size:16px;line-height:1.45;color:#fff}.lender-item summary::-webkit-details-marker{display:none}.lender-item summary:after{content:"＋";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:22px;color:#8bc529}.lender-item[open] summary:after{content:"−"}.lender-details{padding:0 18px 18px;color:#eee;font-size:13px;line-height:1.65}.lender-details dl{display:grid;grid-template-columns:minmax(115px,.8fr) 1.5fr;gap:8px 14px;margin:0}.lender-details dt{color:#bfc2c2}.lender-details dd{margin:0;overflow-wrap:anywhere}.lender-details .known{color:#fff;font-weight:650}.lender-details .disclaimer{margin:14px 0 0;padding:11px 12px;border-radius:10px;background:#ffffff10;color:#ddd}@media(max-width:580px){.lender-item summary{font-size:15px;padding:15px 42px 15px 15px}.lender-details{padding:0 15px 16px}.lender-details dl{grid-template-columns:1fr;gap:2px}.lender-details dd{margin-bottom:8px}}
+
+/* Компактний блок інформації про кредиторів */
+.lender-info>.lender-main-summary{list-style:none;cursor:pointer;position:relative;padding:14px 42px 14px 15px;border:1px solid #ffffff30;border-radius:11px;background:#ffffff12;color:#fff;font-size:clamp(18px,2.5vw,24px);font-weight:800;line-height:1.3;text-shadow:0 2px 4px #0006}
+.lender-info>.lender-main-summary::-webkit-details-marker{display:none}
+.lender-info>.lender-main-summary:after{content:"＋";position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:22px;color:#8bc529}
+.lender-info[open]>.lender-main-summary:after{content:"−"}
+.lender-info>.lender-intro{margin-top:12px!important}
+
+.lender-info{margin:18px 0 16px!important}
+.lender-info h2{font-size:clamp(20px,2.5vw,26px)!important;margin:0 0 6px!important}
+.lender-intro{font-size:11px!important;line-height:1.4!important;margin:0 0 9px!important}
+.lender-item{margin:6px 0!important;border-radius:9px!important;box-shadow:none!important}
+.lender-item summary{padding:9px 34px 9px 12px!important;font-size:13px!important;line-height:1.25!important}
+.lender-item summary:after{right:12px!important;font-size:17px!important}
+.lender-details{padding:0 12px 10px!important;font-size:11px!important;line-height:1.35!important}
+.lender-details dl{grid-template-columns:minmax(105px,.7fr) 1.5fr!important;gap:3px 9px!important}
+.lender-details dd{margin:0!important}
+.lender-details .disclaimer{margin:7px 0 0!important;padding:6px 8px!important;border-radius:6px!important;font-size:10px!important;line-height:1.35!important}
+@media(max-width:580px){.lender-item summary{padding:8px 32px 8px 10px!important;font-size:12px!important}.lender-details{padding:0 10px 9px!important;font-size:10.5px!important}.lender-details dl{grid-template-columns:minmax(92px,.75fr) 1.25fr!important;gap:3px 7px!important}.lender-details dt,.lender-details dd{overflow-wrap:anywhere}.lender-info h2{font-size:21px!important}}
+
+
+/* Навігація FineoHub */
+.nav{flex-wrap:wrap}
+.menu-toggle{border:1px solid #ffffff55;background:#ffffff18;color:#fff;border-radius:11px;width:44px;height:42px;font-size:25px;line-height:1;cursor:pointer;display:grid;place-items:center;position:relative;z-index:5}
+.menu-toggle:hover,.menu-toggle:focus-visible{background:#ffffff30;outline:2px solid #8bc529;outline-offset:2px}
+.site-menu{max-width:1116px;margin:0 auto 8px;padding:0 22px 16px;position:relative;z-index:4;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.site-menu[hidden]{display:none}
+.site-menu a{display:block;padding:12px 14px;border:1px solid #ffffff38;border-radius:10px;background:#ffffff12;color:#fff;text-decoration:none;font-weight:700;font-size:14px;transition:background .15s ease,border-color .15s ease}
+.site-menu a:hover,.site-menu a:focus-visible{background:#ffffff28;border-color:#8bc529;outline:none}
+.back-to-top{position:fixed;right:18px;bottom:22px;z-index:30;width:48px;height:48px;border:0;border-radius:50%;background:#83b52b;color:#142b0b;font-size:27px;font-weight:900;box-shadow:0 5px 18px #0005;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:#a0d34a}
+#page-top,#offers-section,#how-to-credit,#faq-section,#lender-info,#contacts-section{scroll-margin-top:16px}
+@media(max-width:580px){.nav{gap:10px}.navtag{margin-left:auto}.menu-toggle{flex:0 0 42px;width:42px;height:40px}.site-menu{grid-template-columns:1fr;padding:0 16px 14px;gap:6px}.site-menu a{padding:11px 13px;font-size:14px}.back-to-top{right:14px;bottom:16px;width:44px;height:44px}}
+
+.feature-panel{margin:22px 0;padding:20px;border:1px solid #ffffff30;border-radius:18px;background:#ffffff12;color:#fff;box-shadow:0 8px 24px #0002}.feature-panel h2{margin:0 0 8px;font-size:22px;color:#fff}.feature-panel p{color:#e1e1e1;font-size:13px;line-height:1.55}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.top-pick{background:#fff;color:#183c3a;border-radius:14px;padding:15px;display:flex;flex-direction:column;gap:8px}.top-pick strong{font-size:16px}.top-pick span{font-size:12px;color:#627775}.top-pick a{margin-top:auto;text-decoration:none;background:#11b9ad;color:#063f3c;text-align:center;padding:10px;border-radius:10px;font-weight:800;font-size:13px}.favorite-toggle{margin-left:auto;padding:8px 10px;background:#f0f7f5;color:#087f7a;border:1px solid #cce9e4;font-size:12px;white-space:nowrap}.card-top{align-items:center}.favorites-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0;color:#fff}.favorites-toolbar button{border:1px solid #ffffff45;background:#ffffff15;color:#fff;border-radius:10px;padding:9px 12px;font-weight:750;cursor:pointer}.card.is-favorite{outline:2px solid #8bc529;outline-offset:2px}@media(max-width:700px){.feature-grid{grid-template-columns:1fr}.feature-panel{padding:16px}.favorites-toolbar{align-items:flex-start;flex-direction:column}}
+
+/* Оновлена темна фінансова тема */
+:root{--teal:#83bd25;--teal-dark:#4e8614;--teal-pale:#eff8df;--ink:#17220e;--muted:#68756a;--line:#e5e9e0;--white:#fff;--bg:#292929}
+body{background-color:#292929;background-image:radial-gradient(circle at 1px 1px,#ffffff20 1px,transparent 1.7px),radial-gradient(ellipse at 20% 25%,#5559 0,transparent 45%),radial-gradient(ellipse at 80% 75%,#090909aa 0,transparent 48%),repeating-linear-gradient(145deg,#ffffff08 0 1px,transparent 1px 22px),linear-gradient(135deg,#202020,#454545 52%,#222);background-size:5px 5px,auto,auto,auto,auto;background-attachment:fixed;color:#fff}
+body:before{opacity:.23;background-position:center 55%;background-size:min(1100px,120vw) auto}
+.topbar{background-color:#242424!important;background-image:radial-gradient(circle at 1px 1px,#ffffff20 1px,transparent 1.7px),linear-gradient(#151515d9,#222c)!important;border-bottom:1px solid #83bd25}
+.brand,.brand span,.navtag,.hero,.hero h1,.hero p,.eyebrow,.section-head,.section-head h2{color:#fff!important}
+.logo{background:#83bd25!important;color:#17220e!important;box-shadow:0 6px 20px #0006}
+.hero p{color:#ededed!important}
+.pill{background:#ffffff16!important;border-color:#ffffff38!important;color:#fff!important}
+main{color:#fff}
+.section-head p,.section-head .muted{color:#dedede!important}
+.card{background:#fff!important;border:1px solid #e5e5e5!important;color:#17220e!important;box-shadow:0 10px 26px #0005!important}
+.card h3{color:#17220e!important}
+.card-copy{color:#657064!important}
+.offer-icon{background:linear-gradient(145deg,#eff8df,#d8edb8)!important;color:#4e8614!important}
+.cta,.top-pick a{background:#80b52a!important;color:#fff!important;box-shadow:0 5px 13px #0003}
+.cta:hover,.top-pick a:hover{background:#67991d!important}
+.count{background:#eff8df!important;color:#4e8614!important}
+.note{background:#292929!important;border:1px solid #666!important;color:#eee!important}
+footer{background:#222!important;border-top:1px solid #666!important;color:#ddd!important}
+.feature-panel{background:#ffffff12!important;border-color:#ffffff35!important;color:#fff!important}
+.top-pick{background:#fff!important;color:#17220e!important}
+.top-pick span{color:#657064!important}
+.faq-item,.lender-item,.lender-info>.lender-main-summary{background:#ffffff12!important;border-color:#ffffff38!important}
+.faq-item summary,.faq-item button,.lender-item summary{color:#fff!important}
+.faq-answer,.lender-details{color:#e8e8e8!important}
+.back-to-top{background:#83bd25!important;color:#17220e!important}
+@media(max-width:580px){.hero h1{color:#fff!important}}
+
+
+/* Заголовок і бренд — за масштабом та кольорами з референсного зображення */
+.brand{font-size:clamp(34px,5.2vw,72px)!important;letter-spacing:-2.2px!important;gap:14px!important}
+.brand-green{color:#79c51d!important}
+.brand-coins{width:clamp(52px,5.5vw,76px)!important;height:clamp(50px,5.2vw,70px)!important;flex-basis:clamp(52px,5.5vw,76px)!important}
+.hero h1{font-size:clamp(46px,8vw,108px)!important;line-height:1.08!important;letter-spacing:-2.5px!important;max-width:1240px!important;text-align:center!important;margin:18px auto 24px!important;font-weight:850!important}
+.hero{text-align:center!important}
+.hero p{max-width:1160px!important;margin-left:auto!important;margin-right:auto!important;font-size:clamp(17px,2.4vw,29px)!important;line-height:1.48!important}
+@media(max-width:580px){
+ .brand{font-size:30px!important;letter-spacing:-1px!important;gap:8px!important}
+ .brand-coins{width:48px!important;height:48px!important;flex-basis:48px!important}
+ .hero h1{font-size:clamp(38px,10vw,54px)!important;line-height:1.08!important;letter-spacing:-1.1px!important;margin:14px auto 18px!important}
+ .hero p{font-size:16px!important;line-height:1.5!important}
+}
+
+</style>
+
+<style id="fineohub-green-refresh">
+:root{--green:#79c51d;--green-dark:#5d9e10;--ink:#f5f7f2;--muted:#c5cbc0;--line:#ffffff24}
+body{color:#f4f5f2;background-color:#202120;background-image:radial-gradient(circle at 1px 1px,#ffffff19 1px,transparent 1.7px),radial-gradient(ellipse at 16% 18%,#62626255 0,transparent 44%),radial-gradient(ellipse at 85% 75%,#090b0988 0,transparent 48%),linear-gradient(135deg,#191b19,#303330 52%,#171917);background-size:6px 6px,auto,auto,auto;background-attachment:fixed}
+body:before{opacity:.13}
+.topbar{background-color:#202220;background-image:radial-gradient(circle at 1px 1px,#ffffff20 1px,transparent 1.7px),linear-gradient(#1118,#191c19d9),linear-gradient(120deg,#303330,#171917 62%,#343832);border-bottom:3px solid var(--green)}
+.brand{gap:14px;font-size:clamp(28px,4vw,52px);letter-spacing:-1.8px;color:#fff}
+.brand-coins{width:66px;height:62px;flex:0 0 66px;filter:drop-shadow(0 3px 5px #0008)}
+.brand-green{color:var(--green)}
+.nav-assurance{display:flex;align-items:center;gap:12px;color:#f5f5f5;font-size:clamp(15px,2vw,23px);line-height:1.25}
+.nav-assurance svg{width:47px;height:54px;filter:drop-shadow(0 3px 6px #0008)}
+.navtag{display:none}
+.hero{padding-top:34px;padding-bottom:46px}
+.hero h1{color:#fff}
+.hero p{color:#e4e7e1}
+.hero .eyebrow{color:#a6e45c}
+.menu-toggle{background:#79c51d!important;color:#17200f!important;border:0!important}
+.site-menu a{background:#ffffff12!important;border-color:#ffffff25!important;color:#fff!important}
+main{margin:0 auto;padding-top:28px}
+.section-head h2{color:#fff}
+.section-head p{color:#cbd0c7}
+.count{background:#79c51d;color:#18220e}
+.data-note{background:#ffffff0c!important;border:1px solid #ffffff22!important;color:#e2e5df!important}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.card{background:linear-gradient(145deg,#ffffff20,#ffffff0b)!important;border:1px solid #ffffff2b!important;border-radius:15px!important;padding:13px!important;min-height:0!important;box-shadow:0 8px 22px #0003!important;color:#fff!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 26px #0005!important;border-color:#79c51d88!important}
+.card-top{gap:9px;margin-bottom:9px!important}
+.offer-icon{width:37px!important;height:37px!important;flex:0 0 37px!important;border-radius:12px!important;background:#79c51d20!important;border:1px solid #79c51d75;color:#a8e85a!important;font-size:13px!important}
+.card h3{color:#fff;font-size:16px!important}
+.label{color:#a7d86a!important;font-size:9px!important;letter-spacing:.7px}
+.card-copy{font-size:11px!important;line-height:1.4!important;color:#cbd0c7!important;margin:0 0 9px!important}
+.offer-facts{gap:5px!important;margin-bottom:10px!important}
+.offer-fact{background:#00000022!important;border:1px solid #ffffff18!important;border-radius:9px!important;padding:7px 8px!important}
+.offer-fact strong{color:#bfc8b7!important;font-size:10px!important}
+.offer-fact span{color:#fff!important;font-size:11px!important}
+.cta{background:linear-gradient(135deg,#8bd52a,#64ad13)!important;color:#17210e!important;border-radius:10px!important;padding:10px 12px!important;font-weight:850!important;font-size:12px!important;box-shadow:0 4px 12px #0003}
+.cta:hover{filter:brightness(1.08)}
+footer{background:#151715!important;color:#cdd2c9!important;border-top:1px solid #79c51d55}
+.footer-brand{color:#8bd52a!important}
+.back-to-top{background:#79c51d!important;color:#17210e!important}
+.closing-hero{margin:38px -22px 0;padding:42px 22px 38px;background-color:#202220;background-image:radial-gradient(circle at 1px 1px,#ffffff20 1px,transparent 1.7px),linear-gradient(#141614c9,#141614df),linear-gradient(120deg,#343832,#191b19 60%,#30332e);border-top:2px solid #79c51d;position:relative;overflow:hidden}
+.closing-inner{max-width:1050px;margin:auto;text-align:center}
+.closing-inner h2{font-size:clamp(34px,6vw,70px);line-height:1.08;letter-spacing:-1.8px;color:#fff;margin:0 auto 22px;max-width:900px}
+.closing-inner>p{font-size:clamp(16px,2.5vw,25px);line-height:1.55;color:#f0f1ed;margin:0 auto;max-width:1000px}
+.closing-benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 30px;text-align:left}
+.closing-benefit{display:flex;align-items:center;gap:14px;color:#f3f4f0;font-size:clamp(14px,2vw,22px);line-height:1.35}
+.benefit-icon{width:76px;height:76px;flex:0 0 76px;border:3px solid #79c51d;border-radius:50%;display:grid;place-items:center;color:#79c51d}
+.benefit-icon svg{width:42px;height:42px}
+.closing-cta{display:flex;align-items:center;justify-content:center;gap:20px;max-width:760px;margin:0 auto;background:linear-gradient(135deg,#8bd52a,#64ad13);color:#fff;text-decoration:none;border:1px solid #a7e65d;border-radius:28px;padding:22px 25px;font-size:clamp(20px,3.5vw,36px);font-weight:900;letter-spacing:.3px;box-shadow:0 8px 0 #315e0b,0 15px 30px #0005;text-shadow:0 2px 3px #355b13}
+.closing-cta span{font-size:1.5em;line-height:.7}
+.closing-note{font-size:12px!important;color:#c5c9c0!important;margin:25px auto 0!important;max-width:850px!important}
+.mobile-break{display:none}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.closing-benefits{gap:12px}.benefit-icon{width:62px;height:62px;flex-basis:62px}.benefit-icon svg{width:34px;height:34px}}
+@media(max-width:580px){
+ .nav{padding:14px 15px;gap:8px}.brand{font-size:30px;gap:8px}.brand-coins{width:48px;height:48px;flex-basis:48px}.nav-assurance{font-size:12px;gap:6px}.nav-assurance svg{width:30px;height:38px}
+ .hero{padding:28px 17px 42px}.hero h1{font-size:34px;line-height:1.08;letter-spacing:-1px}.hero p{font-size:15px;line-height:1.55}
+ main{padding:22px 12px 28px}.section-head{align-items:flex-start;margin-bottom:13px}.section-head h2{font-size:20px}.section-head p{font-size:12px}.count{font-size:11px;padding:7px 9px}
+ .grid{grid-template-columns:1fr;gap:9px}.card{padding:11px!important;border-radius:13px!important}.card-top{margin-bottom:7px!important}.card-copy{font-size:11px!important}.offer-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px!important}.offer-fact{padding:6px 6px!important}.offer-fact strong{font-size:9px!important}.offer-fact span{font-size:10px!important;overflow-wrap:anywhere}
+ .cta{padding:9px!important;font-size:12px!important}.closing-hero{margin:28px -12px 0;padding:34px 16px 30px}.closing-inner h2{font-size:36px;margin-bottom:16px}.closing-inner>p{font-size:16px;line-height:1.5}.closing-benefits{grid-template-columns:1fr;gap:15px;margin:25px auto;max-width:280px}.closing-benefit{font-size:17px}.benefit-icon{width:58px;height:58px;flex-basis:58px;border-width:2px}.benefit-icon svg{width:31px;height:31px}.closing-cta{border-radius:18px;padding:18px 12px;font-size:21px;gap:12px}.closing-note{font-size:11px!important}.mobile-break{display:block}
+}
+/* Картки повернуті до попереднього оформлення; змінена лише прозорість */
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:rgba(255,255,255,.88)!important;border:1px solid rgba(255,255,255,.62)!important;border-radius:21px!important;padding:20px!important;min-height:224px!important;box-shadow:0 7px 22px #0002!important;color:#17220e!important;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #0003!important;border-color:rgba(121,197,29,.75)!important}
+.card-top{gap:12px!important;margin-bottom:17px!important}
+.offer-icon{width:47px!important;height:47px!important;flex:0 0 47px!important;border-radius:15px!important;background:linear-gradient(145deg,#eff8dfd9,#d8edb8d9)!important;color:#4e8614!important;font-size:18px!important}
+.card h3{font-size:17px!important;color:#17220e!important}
+.label{font-size:11px!important;color:#66833e!important;margin-top:5px!important;letter-spacing:.3px!important}
+.card-copy{font-size:13px!important;line-height:1.55!important;color:#53614c!important;margin:0 0 18px!important}
+.offer-facts{gap:8px!important;margin:14px 0 16px!important;padding:12px!important;background:rgba(245,252,251,.78)!important;border:1px solid rgba(215,241,237,.8)!important;border-radius:14px!important}
+.offer-fact{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;grid-template-columns:95px 1fr!important;gap:8px!important;font-size:13px!important;line-height:1.4!important}
+.offer-fact strong{font-size:13px!important;color:#47706d!important}
+.offer-fact span{font-size:13px!important;color:#163c3b!important}
+.cta{padding:13px 14px!important;border-radius:12px!important;font-size:14px!important}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.grid{grid-template-columns:1fr;gap:12px}.card{min-height:0!important;padding:17px!important;border-radius:18px!important}.card-top{gap:12px!important;margin-bottom:13px!important}.card-copy{font-size:13px!important;margin:0 0 15px!important}.offer-facts{display:grid;grid-template-columns:1fr!important;gap:8px!important;margin:12px 0 14px!important;padding:11px!important}.offer-fact{grid-template-columns:95px 1fr!important;gap:8px!important;padding:0!important}.offer-fact strong,.offer-fact span{font-size:12px!important}.cta{padding:12px!important;font-size:13px!important}}
+
+/* Заголовок і бренд — за масштабом та кольорами з референсного зображення */
+.brand{font-size:clamp(34px,5.2vw,72px)!important;letter-spacing:-2.2px!important;gap:14px!important}
+.brand-green{color:#79c51d!important}
+.brand-coins{width:clamp(52px,5.5vw,76px)!important;height:clamp(50px,5.2vw,70px)!important;flex-basis:clamp(52px,5.5vw,76px)!important}
+.hero h1{font-size:clamp(46px,8vw,108px)!important;line-height:1.08!important;letter-spacing:-2.5px!important;max-width:1240px!important;text-align:center!important;margin:18px auto 24px!important;font-weight:850!important}
+.hero{text-align:center!important}
+.hero p{max-width:1160px!important;margin-left:auto!important;margin-right:auto!important;font-size:clamp(17px,2.4vw,29px)!important;line-height:1.48!important}
+@media(max-width:580px){
+ .brand{font-size:30px!important;letter-spacing:-1px!important;gap:8px!important}
+ .brand-coins{width:48px!important;height:48px!important;flex-basis:48px!important}
+ .hero h1{font-size:clamp(38px,10vw,54px)!important;line-height:1.08!important;letter-spacing:-1.1px!important;margin:14px auto 18px!important}
+ .hero p{font-size:16px!important;line-height:1.5!important}
+}
+
+</style>
+
+</head>
+<body>
+<header class="topbar" id="page-top">
+<div class="nav">
+<div class="brand">
+<svg class="brand-coins" viewBox="0 0 76 70" role="img" aria-label="FineoHub">
+ <g fill="#79c51d" stroke="#1b2a12" stroke-width="2">
+  <ellipse cx="25" cy="51" rx="22" ry="10"/><path d="M3 42v9c0 6 10 11 22 11s22-5 22-11v-9c0 6-10 11-22 11S3 48 3 42z"/>
+  <ellipse cx="25" cy="37" rx="22" ry="10"/><path d="M3 28v9c0 6 10 11 22 11s22-5 22-11v-9c0 6-10 11-22 11S3 34 3 28z"/>
+  <ellipse cx="25" cy="23" rx="22" ry="10"/>
+  <ellipse cx="53" cy="20" rx="18" ry="8"/><path d="M35 20v24c0 5 8 9 18 9s18-4 18-9V20c0 5-8 9-18 9s-18-4-18-9z"/>
+  <ellipse cx="53" cy="8" rx="18" ry="8"/>
+ </g>
+</svg><span>Fineo<span class="brand-green">Hub</span></span></div>
+<div class="nav-assurance"><svg viewBox="0 0 48 54" aria-hidden="true"><path d="M24 2 44 9v16c0 13-8 22-20 27C12 47 4 38 4 25V9z" fill="#79c51d"/><path d="m14 26 7 7 14-16" fill="none" stroke="#17210f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Безпечно<br>та надійно</span></div><button aria-controls="site-menu" aria-expanded="false" aria-label="Відкрити меню" class="menu-toggle" type="button">☰</button>
+</div><nav aria-label="Головна навігація" class="site-menu site-menu" hidden="True" id="site-menu"><a href="#page-top">⌂  Головна</a><a href="#offers-section">💰  Офери</a><a href="#how-to-credit">📋  Як отримати кредит</a><a href="#faq-section">❓  FAQ</a><a href="#lender-info">🏢  Про кредиторів</a><a href="#contacts-section">✉  Контакти</a></nav>
+<div class="hero">
+<div class="eyebrow">Фінансові можливості — в одному місці</div>
+<h1>Миттєві гроші онлайн: Швидко. Надійно. Зручно.</h1>
+<p>Найкращі пропозиції для отримання кредиту від перевірених кредитних організацій-партнерів. Без довідок, поручителів та вікових обмежень. Гроші за 15 хвилин на банківську картку в будь-який час доби.</p>
+</div>
+</header>
+<main>
+<div class="section-head" id="offers-section">
+<div><h2>Тільки найкращі кредитні пропозиції</h2><p>Оберіть картку, щоб перейти до сторінки пропозиції.</p></div>
+<div class="count">48 пропозицій</div>
+</div>
+<div class="data-note">Важливо: суми, строки, акційні та стандартні ставки зібрані з відкритих інформаційних джерел і можуть змінюватися. Акційна ставка може діяти лише за певних умов. Додаткові комісії та реальна річна процентна ставка (РРПС) можуть істотно впливати на загальну вартість кредиту. Перед поданням заявки перевірте паспорт споживчого кредиту, повну вартість і договір на офіційному сайті кредитора. Якщо дані не підтверджені, картка прямо вказує перевірити їх у кредитора.</div><section aria-label="Список кредитних пропозицій" class="grid">
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Starfin</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–20 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 120 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,9%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/5706?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Bizpozyka</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01% акційна; стандартна — уточнюйте</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/2641?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>SlonCredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>600–32 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>5–360 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,96%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1921?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>MyCredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–50 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01% до 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2681?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Tengo</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,92%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2728?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Sgroshi</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>Уточнюйте на сайті кредитора</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2793?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>SelfieCredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>400–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/2816?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Monto</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 60 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01%; стандартну ставку перевірте в договорі</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8125?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Є-Гроші</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>2 000–100 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>10–30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% для нових; до 1%/день для повторних</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1711?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Miloan</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 60 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01%; стандартну ставку перевірте в договорі</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1436?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>LoviLave</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–20 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 120 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,9%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/3348?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Kreditkasa</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–55 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/2710?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>FinClick</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>5 000–8 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 364 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,92%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/8736?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Top1</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>2 000–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>167–180 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>1,5%/день перші 90 днів; далі 0,15%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8172?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Clickcredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,95%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/3314?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Moneyveo</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–50 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>1–65 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна близько 0,98%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/250?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>FinBert</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>3 000–8 600 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 14 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2986?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Credit7</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 61 дня</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна близько 0,95%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/2099?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Funny Money</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>5 000–8 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 364 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,92%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/9077?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Pango</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–25 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 360 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01%; стандартна ставка залежить від продукту</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/6373?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>CreditPlus</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>30–365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1844?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Rocket Money</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>4 000–8 600 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>від 1 до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,93%/день; можлива комісія</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/8642?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>FirstCredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–50 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 80 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,99%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/6365?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Treba Credit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 10 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>від 15 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,15%/день; уточніть строк і тариф</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8355?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Limon</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 184 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>близько 0,98%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8080?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Suncredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–50 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,9%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8198?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Soscredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–20 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>до 1%/день; акційні умови уточнюйте</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1338?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>ReCredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 40 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01% акційна; стандартна ставка уточнюється</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2736?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Avira</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>5 000–8 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 90 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,72%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/2758?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Prostocredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–6 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>до 1%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/3340?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>cashtancredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–30 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>98–730 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/6295?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Mistermoney</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–5 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 90 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>до 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1845?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Ranok</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–50 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 365 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна 0,9%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8732?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Ewa Cash</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–5 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>близько 0,1%/день; перевірте актуальний тариф</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2783?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>alexcredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–40 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1509?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Nice credit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>Уточнюйте на сайті кредитора</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/2914?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Fin X</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 389–58 824 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 168 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,3%/день; комісія може застосовуватися</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1967?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Best credit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 100 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 1 095 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>від 0,01%/день; залежить від продукту</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8414?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Fcredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–15 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>до 1%/день; можлива комісія</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8484?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Гроші до зарплати</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>Уточнюйте на сайті кредитора</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/8194?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Нові кредити</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>500–20 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>до 1%/день; може бути комісія</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1932?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>superium</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>3 000–60 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>від 6 місяців до 3 років</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,18–0,23%/день; комісія за видачу залежить від продукту</span></div></div><a class="cta" href="https://go.salesdoubler.net/in/offer/6330?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Cashpoint</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>2 000–25 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 20 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/1035?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Fast credit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Строк</strong><span>Уточнюйте на сайті кредитора</span></div><div class="offer-fact"><strong>Ставка</strong><span>Уточнюйте на сайті кредитора</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/3062?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>На все!</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>7 000–100 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 300 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,9–1%/день; комісія за видачу може становити 20%</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2477?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Credos</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>1 000–55 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 30 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,01% акційна; стандартна до 1%/день</span></div></div><a class="cta" href="https://rdr.pdlsd.kz/in/offer/3228?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>maxicredit</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 40 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>90–180 днів новим; до 365 днів повторним</span></div><div class="offer-fact"><strong>Ставка</strong><span>0,25–0,29%/день; акційна ставка може відрізнятися</span></div></div><a class="cta" href="https://rdr.fmcgsd.net/in/offer/2918?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+<article class="card">
+<div class="card-top">
+<div aria-hidden="true" class="offer-icon">FH</div>
+<div><h3>Amigo</h3><div class="label">КРЕДИТНА ПРОПОЗИЦІЯ</div></div></div>
+<p class="card-copy">Орієнтовні умови для ознайомлення. Остаточні параметри визначає кредитор після розгляду заявки.</p>
+<div aria-label="Орієнтовні умови кредиту" class="offer-facts"><div class="offer-fact"><strong>Сума кредиту</strong><span>до 7 000 грн</span></div><div class="offer-fact"><strong>Строк</strong><span>до 360 днів</span></div><div class="offer-fact"><strong>Ставка</strong><span>близько 0,8%/день</span></div></div><a class="cta" href="https://rdr.salesdoubler.com.ua/in/offer/6363?aid=91631" rel="nofollow sponsored noopener" target="_blank">Отримати гроші <span>↗</span></a>
+</article>
+</section>
+<section aria-labelledby="faq-title" class="faq" id="faq-section">
+<h2 id="faq-title">Поширені запитання</h2>
+<details class="faq-item">
+<summary>Що потрібно для отримання кредиту?</summary>
+<div class="faq-answer"><p>Зазвичай потрібні банківська картка, паспорт або ID-картка, реєстраційний номер облікової картки платника податків (ІПН) і номер телефону. Вимоги до віку та документів залежать від конкретного кредитора — перевірте їх перед поданням заявки.</p></div>
+</details>
+<details class="faq-item" id="how-to-credit">
+<summary>Як взяти кредит онлайн?</summary>
+<div class="faq-answer"><ol><li>Оберіть пропозицію та перевірте суму, строк, ставку й повну вартість кредиту.</li><li>Перейдіть на офіційний сайт кредитора, заповніть заявку та надайте необхідні дані.</li><li>Дочекайтеся рішення. Якщо заявку схвалено й договір підписано, кошти можуть бути перераховані на картку відповідно до умов кредитора.</li></ol></div>
+</details>
+<details class="faq-item">
+<summary>Як сплатити кредит?</summary>
+<div class="faq-answer"><p>Сплатити кредит зазвичай можна через особистий кабінет кредитора, інтернет-банкінг або сервіс онлайн-платежів. Деякі кредитори також приймають платежі через термінали чи каси партнерів. Використовуйте лише способи оплати, зазначені кредитором, і перевіряйте реквізити та можливі комісії.</p></div>
+</details>
+</section>
+<details class="lender-info" id="lender-info"><summary class="lender-main-summary">Інформація про кредиторів</summary><p class="lender-intro">Нижче наведено доступні на вітрині відомості про кожну кредитну пропозицію. Адреса, реквізити ліцензії, телефон, e-mail, максимальна РРПС і приклад повної вартості можуть відрізнятися залежно від продукту та змінюватися. Щоб не публікувати неперевірені юридичні чи фінансові дані, поля, які не вдалося надійно підтвердити, позначені як такі, що потребують уточнення у кредитора.</p><details class="lender-item"><summary>Starfin</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–20 000 грн</dd><dt>Строк</dt><dd class="known">до 120 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,9%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Bizpozyka</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 30 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">від 0,01% акційна; стандартна — уточнюйте</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>SlonCredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">600–32 000 грн</dd><dt>Строк</dt><dd class="known">5–360 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,96%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>MyCredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–50 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">від 0,01% до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Tengo</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–30 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,92%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Sgroshi</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>SelfieCredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">400–30 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Monto</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–30 000 грн</dd><dt>Строк</dt><dd class="known">до 60 днів</dd><dt>Ставка</dt><dd class="known">від 0,01%; стандартну ставку перевірте в договорі</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Є-Гроші</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">2 000–100 000 грн</dd><dt>Строк</dt><dd class="known">10–30 днів</dd><dt>Ставка</dt><dd class="known">0,01% для нових; до 1%/день для повторних</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Miloan</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–30 000 грн</dd><dt>Строк</dt><dd class="known">до 60 днів</dd><dt>Ставка</dt><dd class="known">від 0,01%; стандартну ставку перевірте в договорі</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>LoviLave</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–20 000 грн</dd><dt>Строк</dt><dd class="known">до 120 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,9%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Kreditkasa</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–55 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>FinClick</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">5 000–8 000 грн</dd><dt>Строк</dt><dd class="known">до 364 днів</dd><dt>Ставка</dt><dd class="known">0,92%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Top1</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">2 000–30 000 грн</dd><dt>Строк</dt><dd class="known">167–180 днів</dd><dt>Ставка</dt><dd class="known">1,5%/день перші 90 днів; далі 0,15%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Clickcredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–30 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">від 0,95%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Moneyveo</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–50 000 грн</dd><dt>Строк</dt><dd class="known">1–65 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна близько 0,98%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>FinBert</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">3 000–8 600 грн</dd><dt>Строк</dt><dd class="known">до 14 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Credit7</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–30 000 грн</dd><dt>Строк</dt><dd class="known">до 61 дня</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна близько 0,95%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Funny Money</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">5 000–8 000 грн</dd><dt>Строк</dt><dd class="known">до 364 днів</dd><dt>Ставка</dt><dd class="known">0,92%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Pango</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–25 000 грн</dd><dt>Строк</dt><dd class="known">до 360 днів</dd><dt>Ставка</dt><dd class="known">від 0,01%; стандартна ставка залежить від продукту</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>CreditPlus</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–30 000 грн</dd><dt>Строк</dt><dd class="known">30–365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Rocket Money</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">4 000–8 600 грн</dd><dt>Строк</dt><dd class="known">від 1 до 365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,93%/день; можлива комісія</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>FirstCredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–50 000 грн</dd><dt>Строк</dt><dd class="known">до 80 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,99%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Treba Credit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 10 000 грн</dd><dt>Строк</dt><dd class="known">від 15 днів</dd><dt>Ставка</dt><dd class="known">від 0,15%/день; уточніть строк і тариф</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Limon</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–30 000 грн</dd><dt>Строк</dt><dd class="known">до 184 днів</dd><dt>Ставка</dt><dd class="known">близько 0,98%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Suncredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–50 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,9%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Soscredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–20 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">до 1%/день; акційні умови уточнюйте</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>ReCredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 40 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">від 0,01% акційна; стандартна ставка уточнюється</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Avira</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">5 000–8 000 грн</dd><dt>Строк</dt><dd class="known">до 90 днів</dd><dt>Ставка</dt><dd class="known">0,72%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Prostocredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–6 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>cashtancredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–30 000 грн</dd><dt>Строк</dt><dd class="known">98–730 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Mistermoney</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–5 000 грн</dd><dt>Строк</dt><dd class="known">до 90 днів</dd><dt>Ставка</dt><dd class="known">до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Ranok</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–50 000 грн</dd><dt>Строк</dt><dd class="known">до 365 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна 0,9%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Ewa Cash</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–5 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">близько 0,1%/день; перевірте актуальний тариф</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>alexcredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–40 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Nice credit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Fin X</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 389–58 824 грн</dd><dt>Строк</dt><dd class="known">до 168 днів</dd><dt>Ставка</dt><dd class="known">від 0,3%/день; комісія може застосовуватися</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Best credit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 100 000 грн</dd><dt>Строк</dt><dd class="known">до 1 095 днів</dd><dt>Ставка</dt><dd class="known">від 0,01%/день; залежить від продукту</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Fcredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–15 000 грн</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">до 1%/день; можлива комісія</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Гроші до зарплати</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Нові кредити</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">500–20 000 грн</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">до 1%/день; може бути комісія</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>superium</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">3 000–60 000 грн</dd><dt>Строк</dt><dd class="known">від 6 місяців до 3 років</dd><dt>Ставка</dt><dd class="known">0,18–0,23%/день; комісія за видачу залежить від продукту</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Cashpoint</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">2 000–25 000 грн</dd><dt>Строк</dt><dd class="known">до 20 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Fast credit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Строк</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Ставка</dt><dd class="known">Уточнюйте на сайті кредитора</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>На все!</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">7 000–100 000 грн</dd><dt>Строк</dt><dd class="known">до 300 днів</dd><dt>Ставка</dt><dd class="known">0,9–1%/день; комісія за видачу може становити 20%</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Credos</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">1 000–55 000 грн</dd><dt>Строк</dt><dd class="known">до 30 днів</dd><dt>Ставка</dt><dd class="known">0,01% акційна; стандартна до 1%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>maxicredit</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 40 000 грн</dd><dt>Строк</dt><dd class="known">90–180 днів новим; до 365 днів повторним</dd><dt>Ставка</dt><dd class="known">0,25–0,29%/день; акційна ставка може відрізнятися</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details><details class="lender-item"><summary>Amigo</summary><div class="lender-details"><dl><dt>Сума кредиту</dt><dd class="known">до 7 000 грн</dd><dt>Строк</dt><dd class="known">до 360 днів</dd><dt>Ставка</dt><dd class="known">близько 0,8%/день</dd><dt>Адреса кредитора</dt><dd>Уточнюйте в офіційних реквізитах кредитора</dd><dt>Ліцензія / реєстраційні дані</dt><dd>Перевірте актуальні дані в офіційних документах кредитора та реєстрах НБУ</dd><dt>Телефон</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>E-mail</dt><dd>Уточнюйте на офіційному сайті кредитора</dd><dt>Максимальна РРПС</dt><dd>Перевірте в паспорті споживчого кредиту саме для обраного продукту</dd><dt>Приклад розрахунку</dt><dd>Перевірте офіційний приклад у паспорті споживчого кредиту: загальна сума до повернення, проценти й усі комісії</dd></dl><p class="disclaimer">Вітрина не є кредитором. Остаточні умови, повну вартість, комісії та правовий статус надавача перевіряйте перед підписанням договору.</p></div></details></details><div class="note"><strong>Зверніть увагу.</strong> FineoHub є інформаційною вітриною та не видає кредити. Умови, доступність, процентні ставки, комісії та повну вартість кредиту перевіряйте на офіційному сайті кредитора до подання заявки. Кредит — це фінансове зобов’язання; оцініть власні можливості погашення. Перехід за деякими посиланнями може приносити власнику сайту партнерську винагороду, без додаткової оплати для відвідувача.</div>
+
+<section class="closing-hero" aria-label="Переваги FineoHub">
+ <div class="closing-inner">
+  <h2>Миттєвий кредит<br class="mobile-break"> на карту онлайн</h2>
+  <p>Найкращі пропозиції для отримання кредиту від перевірених кредитних організацій-партнерів. Без довідок, поручителів та вікових обмежень. Гроші за 15 хвилин на банківську картку в будь-який час доби.</p>
+  <div class="closing-benefits">
+   <div class="closing-benefit"><span class="benefit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M27 3 10 27h11l-2 18 19-27H26z" fill="currentColor"/></svg></span><span>Абсолютно<br>безкоштовно</span></div>
+   <div class="closing-benefit"><span class="benefit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3 42 10v14c0 11-7 18-18 22C13 42 6 35 6 24V10z" fill="currentColor"/><path d="m15 24 6 6 12-13" fill="none" stroke="#20251a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Тільки перевірені<br>компанії</span></div>
+   <div class="closing-benefit"><span class="benefit-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 40h39M10 36V25h8v11M22 36V17h8v19M34 36V8h8v28" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m8 18 12-8 8 4L41 3" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M33 3h8v8" fill="none" stroke="currentColor" stroke-width="4"/></svg></span><span>Актуальний<br>рейтинг</span></div>
+  </div>
+  <a class="closing-cta" href="#offers-section">ОТРИМАТИ ГРОШІ <span>›</span></a>
+  <p class="closing-note">FineoHub — інформаційний сервіс, а не кредитор. Доступність, вартість і строки кредиту визначаються кредитором індивідуально. Перед оформленням перевіряйте повну вартість кредиту та умови договору.</p>
+ </div>
+</section>
+
+</main>
+<footer id="contacts-section"><div class="footer-inner"><div><div class="footer-brand">FineoHub</div><div>Каталог кредитних пропозицій</div></div><div>Інформаційний сервіс. FineoHub не є кредитором і не гарантує схвалення заявки.</div></div></footer>
+<button aria-label="Повернутися нагору" class="back-to-top" title="Нагору" type="button">↑</button><script>
+(() => {
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('site-menu');
+  const topButton = document.querySelector('.back-to-top');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Відкрити меню' : 'Закрити меню');
+      menu.hidden = isOpen;
+      toggle.textContent = isOpen ? '☰' : '✕';
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.hidden = true; toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Відкрити меню'); toggle.textContent = '☰';
+    }));
+  }
+  if (topButton) {
+    const update = () => topButton.classList.toggle('visible', window.scrollY > 420);
+    window.addEventListener('scroll', update, {passive:true}); update();
+    topButton.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  }
+})();
+</script>
+</body>
+</html>
